@@ -1,0 +1,21 @@
+{
+  "name": "place-info-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "prettier --write .",
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "author": "Deniz Ozger",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "prettier": "2.1.0",
+    "supertest": "^4.0.2"
+  }
+}
