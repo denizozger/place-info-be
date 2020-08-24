@@ -1,7 +1,7 @@
 const request = require("supertest");
 const app = require("../app");
 
-const placeJson = require('./fixture.json')
+const placeJson = require("./fixtures/GXvPAor1ifNfpF0U5PTG0w.json");
 
 describe("Place endpoint", () => {
   it("returns place information given a place id", async () => {
