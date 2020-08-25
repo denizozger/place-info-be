@@ -1,10 +1,10 @@
 const fetch = require("node-fetch");
 
-const THIRD_PARTY_API_URI =
+const CODING_SESSION_API_ENDPOINT =
   "https://storage.googleapis.com/coding-session-rest-api";
 
 function getThirdPartyApiUrlForPlaceId(placeId) {
-  return `${THIRD_PARTY_API_URI}/${placeId}`;
+  return `${CODING_SESSION_API_ENDPOINT}/${placeId}`;
 }
 
 async function getPlace(placeId) {
@@ -12,5 +12,5 @@ async function getPlace(placeId) {
 }
 
 module.exports = {
-  getPlace,
+  getPlace
 };
