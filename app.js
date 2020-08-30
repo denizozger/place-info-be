@@ -1,18 +1,18 @@
 const express = require("express");
-const cors = require('cors')
+const cors = require("cors");
 
 const placeService = require("./service/place-service");
+const { populateMissingDays } = require("./helpers/time-utils");
 
 const app = express();
-
-app.use(cors())
+app.use(cors());
 
 function transformPlace(placeId, place) {
   return {
     id: placeId,
     name: place.displayed_what,
     address: place.displayed_where,
-    openingHours: place.opening_hours.days,
+    openingHours: populateMissingDays(place.opening_hours.days),
   };
 }
 
@@ -25,8 +25,8 @@ app.get("/places/:placeId", async (req, res) => {
   return res.json(transformedPlace);
 });
 
-app.use(function (req, res, next) {
-  res.status(404).send("ಠ_ಠ")
-})
+app.use(function (req, res) {
+  res.status(404).send("ಠ_ಠ");
+});
 
 module.exports = app;

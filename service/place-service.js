@@ -8,5 +8,5 @@ async function getPlace(placeId) {
 }
 
 module.exports = {
-  getPlace
+  getPlace,
 };

@@ -3,8 +3,6 @@
 This is a service that gets place information from https://storage.googleapis.com/coding-session-rest-api, transforms it
 and returns to the clients.
 
-
-
 ## Installation & running
 
 ```
