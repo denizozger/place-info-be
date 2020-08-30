@@ -8,9 +8,9 @@ async function getPlace(placeId) {
   return (await fetch(`${CODING_SESSION_API_ENDPOINT}/${placeId}`)).json();
 }
 
-function transformPlace(placeId, place) {
+function transformPlace(place) {
   return {
-    id: placeId,
+    id: place.local_entry_id,
     name: place.displayed_what,
     address: place.displayed_where,
     openingHours: populateMissingDays(place.opening_hours.days),

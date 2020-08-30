@@ -10,7 +10,7 @@ app.get("/places/:placeId", async (req, res) => {
   const placeId = req.params.placeId;
 
   const place = await placeService.getPlace(placeId);
-  const transformedPlace = placeService.transformPlace(placeId, place);
+  const transformedPlace = placeService.transformPlace(place);
 
   return res.json(transformedPlace);
 });
